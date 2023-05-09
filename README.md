@@ -49,7 +49,7 @@ being processed must be loaded first.
 
 Ideally, github should support "go to definition" for Common Lisp out of box.
 Or for all programming languages, for examply by supporting something like
-Emacs ETAG files.
+Emacs TAGS files.
 
 Investigating deeper, we see that gitlab supports Language Server Index Format:
 https://docs.gitlab.com/ee/user/project/code_intelligence.html
