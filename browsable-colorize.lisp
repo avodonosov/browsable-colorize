@@ -41,9 +41,10 @@ TODO:
   form. (At least I don't know currently how to get this info
   from "colorize").
 - When mapping from char position to line numbers, we assume
-  utf-8. This may miscalculate for charset where latic letters
-  occupy multiple bytes, or variable length encodings in case
-  national characters are used.
+  utf-8. This may miscalculate silently or with error
+  for charsets where latin letters occupy multiple bytes,
+  or in case national characters are used in the source code
+  and encoded differently than utf-8.
   Ideally, support automatic detection, by file header comments
   or/and from the ADSF system that source file belongs to.
   Some manual configuration may be OK too.
@@ -245,8 +246,6 @@ swank/backend:find-definitions is mroe complete than swank/backend:find-source-l
 
 (defparameter *fallback-packages* nil)
 (defparameter *dir-to-github-alist* nil)
-
-(ql:quickload "colorize")
 
 ;; The 2 in the name is just because it is the second
 ;; version. Initially there was another implementation.

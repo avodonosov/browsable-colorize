@@ -48,12 +48,14 @@ being processed must be loaded first.
 # Further Thoughts
 
 Ideally, github should support "go to definition" for Common Lisp out of box.
-Or for all programming languages, for examply by supporting something like
+Or for all programming languages, for example by supporting something like
 Emacs TAGS files.
 
 Investigating deeper, we see that gitlab supports Language Server Index Format:
 https://docs.gitlab.com/ee/user/project/code_intelligence.html
 
-So, maybe someone can move in this direction. Utilize swank, maybe also
-some reader library whose read results include file locations of the read objects,
-and generate LSIF files.
+So, maybe some gitlab user can move in this direction. Utilize swank,
+maybe also some reader library whose read results include file
+locations of the read objects, and generate LSIF files.
+
+Hopefully, github wiill catch-up.
