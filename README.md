@@ -19,12 +19,14 @@ being processed must be loaded first.
 
 ```common-lisp
 
+;; not in Quicklisp yet:
+(pushnew "/apth/to/browsable-colorize/" asdf:*central-registry* :test #'equal)
+
 (ql:quickload "browsable-colorize")
 
 ;; load the library whose package.lisp you want to process
 (ql:quickload "cl+ssl")
 
-;;;
 
 (browsable-colorize:with-browsable-context
     (;; a list of package designators to try when locating
@@ -43,7 +45,7 @@ being processed must be loaded first.
                                                          "src/config.lisp")))
 ```
 
-# Further Thoughs
+# Further Thoughts
 
 Ideally, github should support "go to definition" for Common Lisp out of box.
 Or for all programming languages, for examply by supporting something like
