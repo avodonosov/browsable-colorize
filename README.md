@@ -9,7 +9,7 @@ of symbol definitions and [colorize](https://github.com/kingcons/colorize).
 
 This library defines new coloring type `:common-lisp-browsable` for the
 colorize library. This coloring type is inherited from the original
-`:common-lisp type`, only enhances it with linking symbols to their
+`:common-lisp` type, only enhances it with linking symbols to their
 source code definitions at github. Usage of this coloring type
 requires wrapping of colorize invocations into the
 `browsable-colorize:with-browsable-context` macro. Of course,
