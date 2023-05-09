@@ -7,12 +7,12 @@ of symbol definitions and [colorize](https://github.com/kingcons/colorize).
 
 # Usage
 
-This library defines new coloring type :common-lisp-browsable for the
+This library defines new coloring type `:common-lisp-browsable` for the
 colorize library. This coloring type is inherited from the original
-:common-lisp type, only enhances it with linking symbols to their
-soruce code definitions at github. Usage of this coloring type
-requires wrapping of colorize invocations into an
-browsable-colorize:with-browsable-context macro. Of course,
+`:common-lisp type`, only enhances it with linking symbols to their
+source code definitions at github. Usage of this coloring type
+requires wrapping of colorize invocations into the
+`browsable-colorize:with-browsable-context` macro. Of course,
 in order to determine source code locations, the code
 being processed must be loaded first.
 
@@ -20,7 +20,7 @@ being processed must be loaded first.
 ```common-lisp
 
 ;; not in Quicklisp yet:
-(pushnew "/apth/to/browsable-colorize/" asdf:*central-registry* :test #'equal)
+(pushnew "/path/to/browsable-colorize/" asdf:*central-registry* :test #'equal)
 
 (ql:quickload "browsable-colorize")
 
