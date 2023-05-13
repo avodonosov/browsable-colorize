@@ -45,6 +45,12 @@ being processed must be loaded first.
                                                          "src/config.lisp")))
 ```
 
+Usage from GitHub Actions:
+https://github.com/cl-plus-ssl/cl-plus-ssl/blob/master/.github/workflows/api-doc.yml
+It generates and publishes the following docs:
+  - https://cl-plus-ssl.github.io/cl-plus-ssl/package.html
+  - https://cl-plus-ssl.github.io/cl-plus-ssl/config.html
+
 # Further Thoughts
 
 Ideally, github should support "go to definition" for Common Lisp out of box.
@@ -59,3 +65,4 @@ maybe also some reader library whose read results include file
 locations of the read objects, and generate LSIF files.
 
 Hopefully, github wiill catch-up.
+
