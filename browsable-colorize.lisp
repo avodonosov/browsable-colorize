@@ -51,7 +51,8 @@ TODO:
 |#
 
 (defpackage browsable-colorize
-  (:export with-browsable-context)
+  (:export with-browsable-context
+           better-css)
   (:use cl))
 
 (in-package browsable-colorize)

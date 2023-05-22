@@ -8,4 +8,5 @@
   :author "Anton Vodonosov (avodonosov@yandex.ru)"
   :depends-on ("colorize" "swank")
   :serial t
-  :components ((:file "browsable-colorize")))
+  :components ((:file "browsable-colorize")
+               (:file "css")))

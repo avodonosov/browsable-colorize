@@ -16,6 +16,13 @@ requires wrapping of colorize invocations into the
 in order to determine source code locations, the code
 being processed must be loaded first.
 
+The library also offers function `better-css` that returns
+CSS with improved colors comparing to the default
+`colorize:*coloring-css*`. (Currently it only changes
+string literal color, from the light gray value to a higher
+contrast font. This only relevant if the file you process
+includes string literals, e.g. docstring in the defpackage form).
+
 
 ```common-lisp
 
@@ -36,13 +43,16 @@ being processed must be loaded first.
      ;; to base github URI
      (list (cons (asdf:system-source-directory "cl+ssl")
                  "https://github.com/cl-plus-ssl/cl-plus-ssl/tree/master/")))
-  
-  (colorize:colorize-file :common-lisp-browsable
-                          (asdf:system-relative-pathname :cl+ssl
-                                                         "src/package.lisp"))
-  (colorize:colorize-file :common-lisp-browsable
-                          (asdf:system-relative-pathname :cl+ssl
-                                                         "src/config.lisp")))
+
+  ;; use the better CSS
+  (let ((colorize:*coloring-css* (browsable-colorize:better-css)))
+
+    (colorize:colorize-file :common-lisp-browsable
+                            (asdf:system-relative-pathname :cl+ssl
+                                                           "src/package.lisp"))
+    (colorize:colorize-file :common-lisp-browsable
+                            (asdf:system-relative-pathname :cl+ssl
+                                                           "src/config.lisp"))))
 ```
 
 Usage from GitHub Actions:
