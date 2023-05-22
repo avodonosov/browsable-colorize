@@ -19,8 +19,8 @@ being processed must be loaded first.
 The library also offers function `better-css` that returns
 CSS with improved colors comparing to the default
 `colorize:*coloring-css*`. (Currently it only changes
-string literal color, from the light gray value to a higher
-contrast font. This only relevant if the file you process
+string literal color, from light gray to a higher
+contrast color. This may be relevant if the file you process
 includes string literals, e.g. docstring in the defpackage form).
 
 
@@ -36,8 +36,7 @@ includes string literals, e.g. docstring in the defpackage form).
 
 
 (browsable-colorize:with-browsable-context
-    (;; a list of package designators to try when locating
-     ;; unqualified symbols
+    (;; package designators to try when locating unqualified symbols
      '(#:cl+ssl #:cl+ssl/config)
      ;; an alist mapping from local source code directories
      ;; to base github URI
